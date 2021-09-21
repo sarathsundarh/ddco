@@ -1,0 +1,78 @@
+#! /usr/bin/vvp
+:ivl_version "0.9.7 " "(v0_9_7)";
+:vpi_time_precision + 0;
+:vpi_module "system";
+:vpi_module "v2005_math";
+:vpi_module "va_math";
+S_0x1af8730 .scope module, "circuit3_tb" "circuit3_tb" 2 1;
+ .timescale 0 0;
+v0x1b415c0_0 .var "A", 0 0;
+v0x1b41660_0 .var "B", 0 0;
+v0x1b41710_0 .var "C", 0 0;
+v0x1b417c0_0 .net "D", 0 0, L_0x1b41b30; 1 drivers
+S_0x1af8820 .scope module, "M1" "circuit3" 2 4, 3 1, S_0x1af8730;
+ .timescale 0 0;
+L_0x1b418a0 .functor AND 1, v0x1b41710_0, v0x1b41660_0, C4<1>, C4<1>;
+L_0x1b419d0 .functor OR 1, v0x1b415c0_0, L_0x1b418a0, C4<0>, C4<0>;
+L_0x1b41ad0 .functor AND 1, v0x1b415c0_0, v0x1b41660_0, C4<1>, C4<1>;
+L_0x1b41b30 .functor OR 1, L_0x1b419d0, L_0x1b41ad0, C4<0>, C4<0>;
+v0x1b2e1e0_0 .net "A", 0 0, v0x1b415c0_0; 1 drivers
+v0x1b411b0_0 .net "B", 0 0, v0x1b41660_0; 1 drivers
+v0x1b41250_0 .net "C", 0 0, v0x1b41710_0; 1 drivers
+v0x1b412f0_0 .alias "D", 0 0, v0x1b417c0_0;
+v0x1b413a0_0 .net "w1", 0 0, L_0x1b418a0; 1 drivers
+v0x1b41440_0 .net "w2", 0 0, L_0x1b419d0; 1 drivers
+v0x1b41520_0 .net "w3", 0 0, L_0x1b41ad0; 1 drivers
+    .scope S_0x1af8730;
+T_0 ;
+    %set/v v0x1b415c0_0, 0, 1;
+    %set/v v0x1b41660_0, 0, 1;
+    %set/v v0x1b41710_0, 0, 1;
+    %delay 1, 0;
+    %set/v v0x1b415c0_0, 0, 1;
+    %set/v v0x1b41660_0, 0, 1;
+    %set/v v0x1b41710_0, 1, 1;
+    %delay 1, 0;
+    %set/v v0x1b415c0_0, 0, 1;
+    %set/v v0x1b41660_0, 1, 1;
+    %set/v v0x1b41710_0, 0, 1;
+    %delay 1, 0;
+    %set/v v0x1b415c0_0, 0, 1;
+    %set/v v0x1b41660_0, 1, 1;
+    %set/v v0x1b41710_0, 1, 1;
+    %delay 1, 0;
+    %set/v v0x1b415c0_0, 1, 1;
+    %set/v v0x1b41660_0, 0, 1;
+    %set/v v0x1b41710_0, 0, 1;
+    %delay 1, 0;
+    %set/v v0x1b415c0_0, 1, 1;
+    %set/v v0x1b41660_0, 0, 1;
+    %set/v v0x1b41710_0, 1, 1;
+    %delay 1, 0;
+    %set/v v0x1b415c0_0, 1, 1;
+    %set/v v0x1b41660_0, 1, 1;
+    %set/v v0x1b41710_0, 0, 1;
+    %delay 1, 0;
+    %set/v v0x1b415c0_0, 1, 1;
+    %set/v v0x1b41660_0, 1, 1;
+    %set/v v0x1b41710_0, 1, 1;
+    %delay 1, 0;
+    %end;
+    .thread T_0;
+    .scope S_0x1af8730;
+T_1 ;
+    %vpi_call 2 19 "$monitor", $time, " A=%b B=%b C=%b D=%b", v0x1b415c0_0, v0x1b41660_0, v0x1b41710_0, v0x1b417c0_0;
+    %end;
+    .thread T_1;
+    .scope S_0x1af8730;
+T_2 ;
+    %vpi_call 2 23 "$dumpfile", "circuit3.vcd";
+    %vpi_call 2 24 "$dumpvars", 2'sb01, S_0x1af8730;
+    %end;
+    .thread T_2;
+# The file index is used to find the file name in the following table.
+:file_names 4;
+    "N/A";
+    "<interactive>";
+    "circuit3_tb.v";
+    "circuit3.v";

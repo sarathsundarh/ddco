@@ -1,0 +1,29 @@
+$date
+	Thu Feb 11 22:50:05 2016
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module nand2_tb $end
+$var wire 1 ! c $end
+$var reg 1 " a $end
+$var reg 1 # b $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+0#
+0"
+1!
+$end
+#100
+1#
+#200
+0#
+1"
+#300
+0!
+1#

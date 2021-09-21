@@ -1,0 +1,43 @@
+$date
+	Thu Feb 11 22:42:38 2016
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module circuit2_tb $end
+$var wire 1 ! D $end
+$var reg 1 " A $end
+$var reg 1 # B $end
+$var reg 1 $ C $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+0$
+0#
+0"
+0!
+$end
+#20
+1$
+#40
+0$
+1#
+#60
+1!
+1$
+#80
+0$
+0#
+1"
+#100
+1$
+#120
+0$
+1#
+#140
+1$
+#160

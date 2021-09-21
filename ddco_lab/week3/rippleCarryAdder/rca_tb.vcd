@@ -1,0 +1,120 @@
+$date
+	Thu Feb 11 22:45:42 2016
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	100ps
+$end
+$scope module rca_tb $end
+$var wire 1 ! cout $end
+$var wire 4 " sum [3:0] $end
+$var reg 4 # a [3:0] $end
+$var reg 4 $ b [3:0] $end
+$var reg 1 % cin $end
+$var reg 1 & clk $end
+$var integer 32 ' i [31:0] $end
+$var reg 1 ( reset $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+1(
+b0 '
+0&
+0%
+b0 $
+b0 #
+b0 "
+0!
+$end
+#50
+1&
+#100
+0&
+#125
+0(
+#150
+1&
+#160
+b1 '
+b0 #
+b0 $
+#200
+0&
+#250
+1&
+#260
+b1 "
+b10 '
+b0 #
+b0 $
+1%
+#300
+0&
+#350
+1&
+#360
+b0 "
+b11 '
+b0 #
+b0 $
+0%
+#400
+0&
+#450
+1&
+#460
+b1 "
+b100 '
+b0 #
+b0 $
+1%
+#500
+0&
+#550
+1&
+#560
+b101 '
+#600
+0&
+#650
+1&
+#700
+0&
+#750
+1&
+#800
+0&
+#850
+1&
+#900
+0&
+#950
+1&
+#1000
+0&
+#1050
+1&
+#1100
+0&
+#1150
+1&
+#1200
+0&
+#1250
+1&
+#1300
+0&
+#1350
+1&
+#1400
+0&
+#1450
+1&
+#1500
+0&
+#1550
+1&
+#1560
